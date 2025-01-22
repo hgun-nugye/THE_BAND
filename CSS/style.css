@@ -7,7 +7,8 @@
 }
 
 html{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Verdana,sans-serif;
+  font-weight: 200;
   scroll-behavior: smooth;
 }
 /* 
@@ -26,8 +27,7 @@ html{
 .clear{
   clear: both;
 }
-.btn{
-  
+.btn{  
   padding: 10px 14px;
   background-color: black;
   color: white;
@@ -44,7 +44,7 @@ html{
   color: white !important;
 }
 .text-center{
-  text-align: center; !important;
+  text-align: center !important;
 }
 .mt-8{
   margin-top: 8px;
@@ -52,11 +52,14 @@ html{
 .mt-16{
   margin-top: 16px;
 }
+.mt-32{
+  margin-top: 32px;
+}
 .mb-48{
   margin-bottom: 48px;
 }
 .pull-right{
-  float: right; !important;
+  float: right !important;
 }
 .row{
   margin-left: -8px;
@@ -84,9 +87,10 @@ html{
 
 /* Main */
 #main {
-
+  overflow: hidden;
 }
 
+/* header */
 #header {
   height: 46px;
   width: 100%;
@@ -101,34 +105,50 @@ html{
 #header .search-btn{
   float: right;
 }
-
 #header .search-btn:hover {
   background-color: #f44336;
   cursor: pointer;
 }
-
 #header .search-icon{
   color: #fff;
   font-size: 15px;
   line-height: 46px;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
+/* menu mobile */
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+#header .menu-icon{
+  font-size: 15px;
+  line-height: 46px;
+  padding: 0 20px;
+  color: #fff;
+}
+#header .mobile-menu-btn{
+  float: right;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+  color: black;
+  background-color: #ccc;
+}
 
+/* navigation */
 #nav{
   list-style-type: none;
   display: inline-block;
 }
-
 #nav li{
   display:block;
   position: relative;
 }
-
 #nav > li{
   display: inline-block;
 }
-
 #nav li a{
   text-decoration: none;
   line-height: 46px;
@@ -136,17 +156,14 @@ html{
   /* disisplay: inline-block để có thể định dạng được cao rộng cho phần tử; về cơ bản thẻ a chỉ là inline nên không định dạng được chiều cao. */
   display: block;
 }
-
 #nav > li > a{
   color: white;
   text-transform: uppercase;
 }
-
 #nav li:hover > a{
   background-color: #ccc;
   color: #000;
 }
-
 #nav .subnav{
   display: none;
   min-width: 160px;
@@ -170,11 +187,14 @@ html{
   line-height: 38px;
 }
 
+/* slider */
 #slider {
   margin-top: 46px;
   padding-top: 50%;
   background: url('https://www.w3schools.com/w3images/chicago.jpg') no-repeat top center / cover;
   position: relative;
+  max-width: 100%;
+  padding-right: 8px;
 }
 
 #slider .text-slider
@@ -202,12 +222,15 @@ html{
   margin-top: 25px;
 }
 
+/* content */
 #content .content-section {
-  padding: 64px 0px 112px;
+  padding: 64px 24px 64px;
+  max-width: 100%;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-
+  /* padding-left: 16px ;
+  padding-right: 16px; */
 }
 
 #content .section-heading{
@@ -233,7 +256,7 @@ html{
 }
 
 #content .member-list{
-  margin-top: 47px;
+  margin-top: 32px;
   /* overflow: hidden; */
 }
 
@@ -246,21 +269,17 @@ html{
   width: 154px;
   border-radius: 4px;
 }
+
+/* tour */
 .tour{
   background-color: black;
 }
-#content .tour-section{
-  padding: 64px 0;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* tickets */
 .tickets-list{
   background-color: white;
   margin-top: 40px;
 }
-.tour-section ul li{
+.content-section ul li{
   font-size: 15px;
   padding: 11px 16px ;
   border-bottom: 1px solid darkgray;
@@ -272,7 +291,6 @@ html{
   background-color:#f44336;
   padding: 4px 4px;
   margin-left: 16px;
-
 }
 .tickets-list .quantity{
   color: white;
@@ -285,12 +303,11 @@ html{
   line-height: 24px;
   margin-top: -3px;
 }
-
+/* place ticket */
 .place-list{
-  margin-top: 32px;
+  margin-top: 16px;
   margin-bottom: 48px;
 }
-
 .place-img{
   width: 100%;
   display: block;
@@ -322,7 +339,6 @@ html{
 .contact-content{
   margin-top: 18px;  
 }
-
 .contact-infor {
   font-size: 18px; 
   line-height: 1.5;
@@ -330,6 +346,13 @@ html{
 .contact-infor i[class*="fa-"] {
   width: 30px;
   display: inline-block;
+}
+.contact-infor a{
+  color:#101aef;
+  opacity: 0.8;
+}
+.contact-infor a:hover{
+  opacity: 1;
 }
 
 .contact-form{
@@ -342,11 +365,13 @@ html{
 
 }
 
+/* map */
 .map-section img{
   filter: grayscale(50%);
   width: 100%;
 }
 
+/* footer */
 #footer {
   margin: 50px 0px 70px;
   text-align: center;
@@ -365,11 +390,10 @@ html{
 }
 .link-footer a{
   color: #757575;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
 
-
+/* modal navigation */
 .modal{
   margin-top: 5%;
   position: fixed;
@@ -377,7 +401,7 @@ html{
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0,0,0, 0.4));
+  background-color: rgba(0,0,0, 0.4);
   display: none;
   align-items: center;
   justify-content: center;
@@ -447,6 +471,7 @@ html{
   color: rgb(24, 167, 233);
 }
 
+/* modal animation */
 @keyframes modalFadeIn {
   from {
     transform: translateY(-140px);
@@ -455,6 +480,8 @@ html{
    transform: translateY(-10px);
   }
 }
+
+
 
 
 

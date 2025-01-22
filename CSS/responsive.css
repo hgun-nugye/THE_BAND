@@ -1,0 +1,113 @@
+/* RESPONSIVE */
+/* điểm chuyển từ PC về Tablet hay từ Tablet về Mobile gọi là Break Point */
+/* 
+  PC: >=1024px
+  Tablet: >= 740 & < 1024px
+  Mobile: < 740px
+*/
+
+/* 
+@media (min-width: 1024px) {
+.pc{
+}
+}
+
+@media (min-width: 740px) and (max-width: 1023px){
+.tablet{
+}
+}
+
+@media (max-width: 739px) {
+.mobile {
+}
+}
+*/
+
+/* TABLET RESPONSIVE */
+/* sửa phần margin và padding của thẻ content
+dùng max-width:100% và overflow:hidden */
+
+/* MOBILE AND TABLET RESPONSIVE */
+@media (max-width: 1023px) {
+  #nav .subnav a{
+    padding: 0 13px;
+  }  
+  .btn{
+    padding: 15px 16px;
+  }
+  .contact-form .form-control{
+    padding: 13px;
+  }
+  .contact-infor { 
+    line-height: 2;
+  }
+  #footer .icon-social{
+    color: #757575;
+    font-size: 44px;
+  }
+  #footer .icon-social i{
+    margin: 0 8px;
+  }
+  .link-footer a{
+    padding: 8px 0;
+    display: inline-block;
+  }
+
+}
+
+/* TABLET RESPONSIVE */
+@media (max-width: 1023px && min-width: 740px) {
+  
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 739px) {
+  /* common */
+  .mobile-mt-8{
+    margin-top: 8px;
+  }
+  .mobile-col-full,
+  .mobile-full-width{
+    width: 100%;
+  }
+  /* header */
+  #header{
+    overflow: hidden; /* phần dư ra sẽ bị ẩn, mặc định của div là hiện */
+  }
+  #header .search-btn{
+    display: none;    
+  }
+  #header .mobile-menu-btn{
+    display: block;
+  }
+  /* navigation */
+  #nav{
+    display: block;
+  }
+  #nav > li{
+    display: block;
+    background-color: black;
+    height: auto;
+  }
+  #nav li a{
+    padding: 1px 24px;
+  }
+  #nav > li:first-child{
+    display: inline-block;
+  }
+  #nav .subnav{
+   position: initial;
+   background-color: #333;
+  }
+  #nav .subnav a{
+    color: white;
+    padding: 5px 45px;
+  }
+  /* content */
+  #content .member-img{
+    width: 60%;
+  }
+  .contact-form{
+    margin-top: 32px;
+  }
+}

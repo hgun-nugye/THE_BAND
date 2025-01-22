@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./img/DSC_1983.JPG" type="image/x-icon">
   <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/responsive.css">
   <script src="https://kit.fontawesome.com/99302fd4e8.js" crossorigin="anonymous"></script>
   <title>THE BAND</title>
 </head>
@@ -21,7 +22,7 @@
         <li><a href="#tour">Tour</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-          <a href="">More
+          <a href="#">More
             <i class="nav-arrow-down fa-solid fa-caret-down"></i>
           </a>
           <ul class="subnav">
@@ -38,6 +39,12 @@
         <i class=" search-icon fa-solid fa-magnifying-glass"></i>
       </div>
       <!-- end search button -->
+
+      <!-- menu bars for responsive mobile -->
+      <div id="mobile-menu" class="mobile-menu-btn">
+        <i class="menu-icon fa-solid fa-bars"></i>
+      </div>
+
     </div>
     <!-- end header -->
 
@@ -68,17 +75,17 @@
         <!-- begin meber list -->
         <div class="row member-list">
           <!-- mem 1 -->
-          <div class="col col-third text-center">
+          <div class="col col-third text-center mobile-col-full mt-32">
             <p class="member-name">Name</p>
             <img src="./img/bandmember.jpg" alt="Name" class="member-img">
           </div>
           <!-- mem 2 -->
-          <div class="col col-third text-center">
+          <div class="col col-third text-center mobile-col-full mt-32">
             <p class="member-name">Name</p>
             <img src="./img/bandmember.jpg" alt="Name" class="member-img">
           </div>
           <!-- mem 3 -->
-          <div class="col col-third text-center">
+          <div class="col col-third text-center mobile-col-full mt-32">
             <p class="member-name">Name</p>
             <img src="./img/bandmember.jpg" alt="Name" class="member-img">
           </div>
@@ -89,7 +96,7 @@
 
       <!-- begin tour section -->
       <div id="tour" class="tour">
-        <div class="tour-section">
+        <div class="content-section">
 
           <!-- text tour -->
           <h2 class="section-heading text-white">tour dates</h2>
@@ -106,35 +113,35 @@
           <div class="row place-list">
 
             <!-- place 1 -->
-            <div class=" col col-third">
+            <div class="mobile-col-full col col-third mt-16">
               <img class="place-img" src="./img/newyork.jpg" alt="newyork">
               <div class="place-details">
                 <p class="place-name">New York</p>
                 <p class="place-time">Fri 27 Nov 2016</p>
                 <p class="detail">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <button class="btn js-buy-ticket">Buy Tickets</button>
+                <button class="btn js-buy-ticket mobile-full-width text-center">Buy Tickets</button>
               </div>
             </div>
 
             <!-- place 2 -->
-            <div class="col col-third">
+            <div class="mobile-col-full col col-third mt-16">
               <img class="place-img" src="./img/paris.jpg" alt="paris">
               <div class="place-details">
                 <p class="place-name">Paris</p>
                 <p class="place-time">Sat 28 Nov 2016</p>
                 <p class="detail">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <button class="btn js-buy-ticket">Buy Tickets</button>
+                <button class="btn js-buy-ticket mobile-full-width text-center">Buy Tickets</button>
               </div>
             </div>
 
             <!-- place 3 -->
-            <div class="col col-third">
+            <div class="mobile-col-full col col-third mt-16">
               <img class="place-img" src="./img/sanfran.jpg" alt="sanfran">
               <div class="place-details">
                 <p class="place-name">San Fransisco</p>
                 <p class="place-time">Sun 29 Nov 2016</p>
                 <p class="detail">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <button class="btn js-buy-ticket">Buy Tickets</button>
+                <button class="btn js-buy-ticket mobile-full-width text-center">Buy Tickets</button>
               </div>
             </div>
             <!-- end place 3 -->
@@ -148,31 +155,31 @@
       <div id="contact" class="content-section">
         <!-- text contact -->
         <h2 class="section-heading">contact</h2>
-        <p class="section-subheading">Fan?Drop s note!</p>
+        <p class="section-subheading">Fan?Drop a note!</p>
 
         <div class="row contact-content">
           <!-- contact section left-->
-          <div class="col col-half contact-infor">
+          <div class="col col-half mobile-col-full contact-infor">
             <p><i class="fa-solid fa-location-dot"></i>
               Chicago, US</p>
             <p><i class="fa-solid fa-phone"></i>
-              Phone: +00 151515</p>
+              Phone: <a href="tell:+00 151515">+00 151515</a> </p>
             <p><i class="fa-solid fa-envelope"></i>
-              Email:mail@mail.com</p>
+              Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
           </div>
           <!-- end left -->
 
           <!-- contact section right -->
-          <div class="col col-half contact-form">
+          <div class="col col-half mobile-col-full contact-form">
             <form action="">
 
               <!-- row 1 -->
               <div class="row">
-                <div class="col col-half">
+                <div class="mobile-mt-8 col col-half mobile-col-full">
                   <input required type="text" placeholder="Name" id="" class="form-control">
                 </div>
 
-                <div class="col col-half">
+                <div class="mobile-mt-8 col col-half mobile-col-full">
                   <input required type="email" placeholder="Email" id="" class="form-control">
                 </div>
               </div>
@@ -187,7 +194,7 @@
               <!-- end row 2 -->
 
               <!-- button submit -->
-              <input class="pull-right mt-16 btn " type="submit" value="SEND">
+              <input class="pull-right mt-16 btn mobile-full-width" type="submit" value="SEND">
             </form>
           </div>
           <!-- end right -->
@@ -303,6 +310,44 @@
 
   </script>
 
+
+  <!-- script mobile menu -->
+  <script>
+    var header = document.getElementById('header');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var headerHeight = header.clientHeight;
+
+    // đóng mở mobile menu
+    mobileMenu.onclick = function () {
+      var isClosed = header.clientHeight === headerHeight;
+
+      if (isClosed) {
+        header.style.height = 'auto';
+      }
+      else {
+        header.style.height = null;
+      }
+    }
+
+    // Tự động đóng khi chọn menu 
+    var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+
+    for (var i = 0; i < menuItems.length; i++) {
+      var menuItem = menuItems[i];
+
+      menuItem.onclick = function (event) {
+        var isParentsMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+
+        if (isParentsMenu) {
+          event.preventDefault();
+        }
+        else {
+          header.style.height = null;
+        }
+      }
+    }
+
+  </script>
 </body>
 
 </html>
