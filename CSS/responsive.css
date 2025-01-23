@@ -7,17 +7,17 @@
 */
 
 /* 
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
 .pc{
 }
 }
 
-@media (min-width: 740px) and (max-width: 1023px){
+@media (min-width: 46.25em) and (max-width: 1023px){
 .tablet{
 }
 }
 
-@media (max-width: 739px) {
+@media (max-width: 46.1875em) {
 .mobile {
 }
 }
@@ -28,22 +28,26 @@
 dùng max-width:100% và overflow:hidden */
 
 /* MOBILE AND TABLET RESPONSIVE */
-@media (max-width: 1023px) {
+@media (max-width: 64em) {
   #nav .subnav a{
     padding: 0 13px;
   }  
   .btn{
     padding: 15px 16px;
   }
+  .submit-btn{    
+  font-size: 18px;
+  }
   .contact-form .form-control{
     padding: 13px;
+    font-size: 16px;
   }
   .contact-infor { 
     line-height: 2;
   }
   #footer .icon-social{
     color: #757575;
-    font-size: 44px;
+    font-size: 32px;
   }
   #footer .icon-social i{
     margin: 0 8px;
@@ -52,16 +56,14 @@ dùng max-width:100% và overflow:hidden */
     padding: 8px 0;
     display: inline-block;
   }
-
 }
 
 /* TABLET RESPONSIVE */
-@media (max-width: 1023px && min-width: 740px) {
-  
+@media (max-width: 63.9375em && min-width: 46.25em) { 
 }
 
 /* MOBILE RESPONSIVE */
-@media (max-width: 739px) {
+@media (max-width: 46.1875em) {
   /* common */
   .mobile-mt-8{
     margin-top: 8px;
