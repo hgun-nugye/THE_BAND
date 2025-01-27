@@ -289,7 +289,7 @@
     function showBuyTicket() {
       modal.classList.add('open')
     }
-    // Hàm ẩn modal mua vé (gỡ bỏ class open cuar modal)
+    // Hàm ẩn modal mua vé (gỡ bỏ class open của modal)
     function hideBuyTicket() {
       modal.classList.remove('open')
     }
@@ -298,15 +298,15 @@
     for (const buyBtn of buyBtns) {
       buyBtn.addEventListener('click', showBuyTicket)
     }
-    // Nghe hành vi click vào button
+    // Nghe hành vi click vào button close
     modalClose.addEventListener('click', hideBuyTicket)
 
     modal.addEventListener('click', hideBuyTicket)
 
+    //Nghe hành vi click nhưng trừ phần modal container thì không hideBuyTicket 
     modalContainer.addEventListener('click', function (event) {
-      event.stopPropagation()
+      event.stopPropagation() //dừng sự lan truyền khi click từ vùng ngoài vào vùng container 
     })
-
 
   </script>
 
@@ -323,9 +323,11 @@
 
       if (isClosed) {
         header.style.height = 'auto';
+        //nếu đang ẩn menu thì mở ra 
       }
       else {
         header.style.height = null;
+        //height khi này ăn theo css là 46px 
       }
     }
 
@@ -340,9 +342,12 @@
 
         if (isParentsMenu) {
           event.preventDefault();
+        //nếu item mới click có con là subnav thì ngăn hành động mặc định là nhấn vào thì ẩn 
+
         }
         else {
           header.style.height = null;
+          //nếu không phải cái item trên thì ẩn menu 
         }
       }
     }
